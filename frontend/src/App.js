@@ -3,8 +3,9 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import Signup from './pages/signup';
 import '../src/index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
+import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js'
 
 function App() {
   return (
