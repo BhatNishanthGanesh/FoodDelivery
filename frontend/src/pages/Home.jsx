@@ -8,7 +8,7 @@ function Home() {
         <div>
             <div><Navbar/></div>
             <div><Carousel /></div>
-            <div>
+            <div className='d-flex'>
                 <div><Card/></div>
                 <div><Card/></div>
                 <div><Card/></div>
