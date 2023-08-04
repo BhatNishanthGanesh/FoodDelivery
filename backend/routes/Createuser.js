@@ -26,16 +26,29 @@ router.post('/createuser',
                 // password: "123456",
                 // email: "nishanthbhat20@gmail.com",
                 // location: "India"
-
-
-
-
             })
-            res.json({ success: true })
+            res.json({ successs: true })
         }
         catch (error) {
             console.log(error);
-            res.json({ success: false })
+            res.json({ successs: false })
         }
     })
+
+router.post("/loginuser",async(req,res)=>{
+    let email=req.body.email
+    try{
+        let userdata= await User.findOne({email})
+        if(!userdata){
+            return  res.status(400).json({ errors: "Try logging with correct credentials" });
+        }
+        if(req.body.password !== userdata.password){
+            return  res.status(400).json({ errors: "Try logging with correct credentials" });
+        }
+        return res.json({success:true})
+    }catch(error){
+        console.log(error);
+        res.json({success:false})
+    }
+})
 module.exports = router;
