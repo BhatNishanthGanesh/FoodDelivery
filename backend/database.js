@@ -6,7 +6,7 @@ const mongoDB = async () => {
     await mongoose.connect(MongoURL, { useNewUrlParser: true });
     console.log('Connected to MongoDB successfully');
 
-    const fetched_data = await mongoose.connection.db.collection("users");
+    const fetched_data = await mongoose.connection.db.collection("FoodData");
     const data = await fetched_data.find({}).toArray();
     // console.log(data);
   } catch (err) {
