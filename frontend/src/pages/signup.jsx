@@ -9,7 +9,7 @@ function Signup() {
     console.log(JSON.stringify({
       name: credential.name, email: credential.email, password: credential.password, location: credential.geolocation
     }));
-    const response = await fetch('http://localhost:5000/api/loginuser', {
+    const response = await fetch('http://localhost:3000/api/createuser', {
       method: 'POST',
       headers: { 
         'Content-Type': 'application/json'
@@ -18,6 +18,7 @@ function Signup() {
     });
     const json = await response.json();
     console.log(json);
+    
     if (!json.success) {
       alert('Enter valid credentials');
     }
