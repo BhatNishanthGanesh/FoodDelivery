@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const MongoURL = 'mongodb+srv://nishanth:nishanth2003@cluster0.fbotoww.mongodb.net/Food';
+const MongoURL = 'mongodb+srv://nishanth:nishanth2003@cluster0.mongodb.net/Food';
 
 const mongoDB = async () => {
   try {
@@ -14,7 +14,8 @@ const mongoDB = async () => {
         console.log(err);
       }else{
         global.FoodData=data;
-        global.FoodCategory=catData
+        global.FoodCategory=catData;
+      
       }
      })
     });

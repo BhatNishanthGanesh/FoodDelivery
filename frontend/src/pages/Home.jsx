@@ -29,7 +29,6 @@ function Home() {
             <div className='d-flex'>
                 <div><Card/></div>
                 <div><Card/></div>
-                <div><Card/></div>
             </div>
             <div><Footer/></div>
         </div>
